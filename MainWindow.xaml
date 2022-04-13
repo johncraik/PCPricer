@@ -85,7 +85,20 @@
 
             <!--List computers with missing parts AND list computers with price changes-->
             <Grid x:Name="Gd_Details" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
+                <!--#Missing Parts:>>>-->
+                <Grid x:Name="Gd_MissingParts" Grid.Row="0">
+                    
+                </Grid>
+
+                <!--#Price Changes:>>>-->
+                <Grid x:Name="Gd_PriceChanges" Grid.Row="1">
+                    
+                </Grid>
             </Grid>
         </Grid>
     </Grid>
