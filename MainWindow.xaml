@@ -45,6 +45,13 @@
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="5*"/>
                     </Grid.RowDefinitions>
+
+                    <!--App Title:-->
+                    <Label Grid.Row="0" Content="PC Pricer Application" 
+                           FontWeight="Bold" FontSize="65"                      
+                           VerticalContentAlignment="Center" Margin="0,0,0,8"/>
+                    <TextBlock Grid.Row="1" Text="This application uses an unofficial API for pcpartpicker.com. The API allows for real-time updates of pc components from pcpartpicker.com, giving accurate price changes and missing parts (out of stock) in any product listed on the website. See 'Help' below for more information." 
+                               TextWrapping="Wrap" FontSize="30"/>
                 </Grid>
 
                 <!--#PPP Actions:>>>-->
