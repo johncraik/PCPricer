@@ -50,7 +50,8 @@
                     <Label Grid.Row="0" Content="PC Pricer Application" 
                            FontWeight="Bold" FontSize="65"                      
                            VerticalContentAlignment="Center" Margin="0,0,0,8"/>
-                    <TextBlock Grid.Row="1" Text="This application uses an unofficial API for pcpartpicker.com. The API allows for real-time updates of pc components from pcpartpicker.com, giving accurate price changes and missing parts (out of stock) in any product listed on the website. See 'Help' below for more information." 
+                    <!--App Description-->
+                    <TextBlock Grid.Row="1" Text="This application uses an unofficial API for pcpartpicker.com. The API allows for real-time updates of pc components from pcpartpicker.com, giving accurate price changes and missing parts (out of stock) in any product listed on the website. See 'Help' below for more information. NOTE: Press 'Refresh Data' below upon load." 
                                TextWrapping="Wrap" FontSize="30"/>
                 </Grid>
 
@@ -65,6 +66,18 @@
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
+
+                    <!--PPP API Title:-->
+                    <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Content="PC Part Picker API - Quick Actions" 
+                           FontWeight="Bold" FontSize="45"                      
+                           VerticalContentAlignment="Center" Margin="0,0,0,10"/>
+                    <!--PPP Refresh Btn:-->
+                    <Button x:Name="Btn_Refresh" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Content="Refresh Data" FontSize="30" 
+                            BorderThickness="2" Margin="0,0,10,0" Click="Btn_Refresh_Click"/>
+                    <Button x:Name="Btn_OpenSCR" Grid.Column="1" Grid.Row="1" Content="Open Scripts Folder" FontSize="20" 
+                            BorderThickness="2" Margin="0,0,0,5" FontStyle="Italic" Click="Btn_OpenSCR_Click"/>
+                    <Button x:Name="Btn_OpenDAT" Grid.Column="1" Grid.Row="2" Content="Open Data Folder" FontSize="20" 
+                            BorderThickness="2" Margin="0,5,0,0" FontStyle="Italic" Click="Btn_OpenDAT_Click"/>
                 </Grid>
 
                 <!--#Quick Actions:>>>-->

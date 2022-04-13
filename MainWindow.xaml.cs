@@ -51,9 +51,19 @@ namespace PCPricer
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Btn_Refresh_Click(object sender, RoutedEventArgs e)
         {
             RunPython("ppp.py");
+        }
+
+        private void Btn_OpenSCR_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_OpenDAT_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
