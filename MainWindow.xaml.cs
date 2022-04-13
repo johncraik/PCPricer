@@ -53,7 +53,7 @@ namespace PCPricer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            RunPython("test.py");
+            RunPython("ppp.py");
         }
     }
 }
