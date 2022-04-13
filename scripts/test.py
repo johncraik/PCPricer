@@ -1,6 +1,12 @@
 import os
 
-dir = os.getcwd()
-f = open(dir + "\data\\cpu\\test.txt", "w")
+#obtain relative path:
+dir = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'data', 'cpu.text'))
+
+#open file, append it (write) and close it.
+f = open(dir, "a")
 f.write("Insert CPU data")
 f.close()
+
+#pause program
+input()
