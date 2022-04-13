@@ -26,20 +26,17 @@ namespace PCPricer
             InitializeComponent();
         }
 
-        private void run_cmd(string[] cmd)
+        private void RunPython(string script)
         {
-            string args = "";
-            foreach (string s in cmd)
-            {
-                args += s;
-            }
+            string path = Environment.CurrentDirectory;
+            path = path[..path.IndexOf("PCPicker")] + @"\PCPicker\scripts";
 
             Process p = new();
-            ProcessStartInfo pInfo = new ProcessStartInfo
+            ProcessStartInfo pInfo = new()
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
                 FileName = "cmd.exe",
-                Arguments = args
+                Arguments = (@"/C cd \/C cd " + path + "/C python " + script)
             };
 
             p.StartInfo = pInfo;
@@ -48,16 +45,7 @@ namespace PCPricer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string path = Environment.CurrentDirectory;
-            path = path[..path.IndexOf("PCPicker")] + @"\PCPicker\scripts";
-
-            string[] args = 
-            {
-                @"/C cd \",
-                @"/C cd " + path,
-                @"/C python test.py"
-            };
-            run_cmd(args);
+            RunPython("test.py");
         }
     }
 }
