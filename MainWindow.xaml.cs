@@ -65,5 +65,35 @@ namespace PCPricer
         {
 
         }
+
+        private void Btn_ViewProducts_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_MarkALL_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_MarkMissing_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_MarkPriceChg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Help_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Quit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
