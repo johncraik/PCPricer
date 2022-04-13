@@ -74,8 +74,10 @@
                     <!--PPP Refresh Btn:-->
                     <Button x:Name="Btn_Refresh" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Content="Refresh Data" FontSize="30" 
                             BorderThickness="2" Margin="0,0,10,0" Click="Btn_Refresh_Click"/>
+                    <!--Open Scripts Fdr Btn:-->
                     <Button x:Name="Btn_OpenSCR" Grid.Column="1" Grid.Row="1" Content="Open Scripts Folder" FontSize="20" 
                             BorderThickness="2" Margin="0,0,0,5" FontStyle="Italic" Click="Btn_OpenSCR_Click"/>
+                    <!--Open Data Fdr Btn:-->
                     <Button x:Name="Btn_OpenDAT" Grid.Column="1" Grid.Row="2" Content="Open Data Folder" FontSize="20" 
                             BorderThickness="2" Margin="0,5,0,0" FontStyle="Italic" Click="Btn_OpenDAT_Click"/>
                 </Grid>
@@ -92,6 +94,32 @@
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
+
+                    <!--Product Actions Title:-->
+                    <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Content="Product Actions and Updates" 
+                           FontWeight="Bold" FontSize="45"                      
+                           VerticalContentAlignment="Center" Margin="0,0,0,10"/>
+                    <!--View All Products Btn:-->
+                    <Button x:Name="Btn_ViewProducts" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Content="View All Products" FontSize="30" 
+                            BorderThickness="2" Margin="0,0,10,0"/>
+                    <!--Mark ALL Updates Btn:-->
+                    <Button x:Name="Btn_MarkALL" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" FontSize="30" 
+                            BorderThickness="2" Margin="0,0,10,0">
+                        <TextBlock Text="Mark All Updates as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" TextAlignment="Center"/>
+                    </Button>
+                    <!--Mark Missing Part Updates Btn:-->
+                    <Button x:Name="Btn_MarkMissing" Grid.Column="2" Grid.Row="1" FontSize="20" 
+                            BorderThickness="2" Margin="0,0,0,5" FontStyle="Italic">
+                        <TextBlock Text="Mark Missing Part Updates as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" TextAlignment="Center"/>
+                    </Button>
+                    <!--Mark Price Change Updates Btn:-->
+                    <Button x:Name="Btn_MarkPriceChg" Grid.Column="2" Grid.Row="2" FontSize="20" 
+                            BorderThickness="2" Margin="0,5,0,0" FontStyle="Italic">
+                        <TextBlock Text="Mark Price Change Updates as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" TextAlignment="Center"/>
+                    </Button>
                 </Grid>
 
                 <!--#Quit:>>>-->
