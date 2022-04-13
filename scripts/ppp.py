@@ -4,7 +4,7 @@ from pcpartpicker import API
 
 def WriteData(data, dir):
     #open file, append it (write) and close it.
-    f = open(dir, "a")
+    f = open(dir, "w")
     f.write(data.to_json())
     f.close()
 
