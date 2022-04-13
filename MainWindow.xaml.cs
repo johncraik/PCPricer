@@ -43,13 +43,11 @@ namespace PCPricer
             p.StartInfo = pInfo;
             p.Start();
 
-            using (StreamWriter sw = p.StandardInput)
+            using StreamWriter sw = p.StandardInput;
+            if (sw.BaseStream.CanWrite)
             {
-                if (sw.BaseStream.CanWrite)
-                {
-                    sw.WriteLine("cd " + path);
-                    sw.WriteLine("python " + script);
-                }
+                sw.WriteLine("cd " + path);
+                sw.WriteLine("python " + script);
             }
         }
 
