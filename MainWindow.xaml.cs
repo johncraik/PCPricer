@@ -95,5 +95,15 @@ namespace PCPricer
         {
 
         }
+
+        private void Btn_MarkSelectedMissing_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_MarkSelectedPriceChg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

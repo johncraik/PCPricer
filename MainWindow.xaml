@@ -156,6 +156,17 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
+
+                    <!--Missing Parts Update Title:-->
+                    <Label Grid.Column="0" Grid.Row="0" Content="Missing Part Updates" 
+                           FontWeight="Bold" FontSize="45"                      
+                           VerticalContentAlignment="Center" Margin="0,0,0,10"/>
+                    <!--Mark Selected Updates Btn:-->
+                    <Button x:Name="Btn_MarkSelectedMissing" Grid.Column="1" Grid.Row="0" FontSize="25" 
+                            BorderThickness="2" Margin="0,0,10,0" Padding="5" Click="Btn_MarkSelectedMissing_Click">
+                        <TextBlock Text="Mark Selected as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" TextAlignment="Center"/>
+                    </Button>
                 </Grid>
 
                 <!--#Price Changes:>>>-->
@@ -168,6 +179,17 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
+
+                    <!--Missing Parts Update Title:-->
+                    <Label Grid.Column="0" Grid.Row="0" Content="Price Change Updates" 
+                           FontWeight="Bold" FontSize="45"                      
+                           VerticalContentAlignment="Center" Margin="0,0,0,10"/>
+                    <!--Mark Selected Updates Btn:-->
+                    <Button x:Name="Btn_MarkSelectedPriceChg" Grid.Column="1" Grid.Row="0" FontSize="25" 
+                            BorderThickness="2" Margin="0,0,10,0" Padding="5" Click="Btn_MarkSelectedPriceChg_Click">
+                        <TextBlock Text="Mark Selected as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch" TextAlignment="Center"/>
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>
