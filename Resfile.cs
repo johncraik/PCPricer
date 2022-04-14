@@ -34,6 +34,7 @@ namespace PCPricer
             p.StartInfo = pInfo;
             p.Start();
 
+
             //Write to process as standard input (run commands in cmd):
             using StreamWriter sw = p.StandardInput;
             if (sw.BaseStream.CanWrite)

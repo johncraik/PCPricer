@@ -135,6 +135,7 @@ def main():
     print(GetCase(api, path))
     print(GetCaseFan(api, path))
 
+    print("---###COMPLETE###---")
 
 if __name__ == "__main__":
     main()
