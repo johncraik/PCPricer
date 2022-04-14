@@ -10,11 +10,13 @@ namespace PCPricer
 {
     internal static class  Resfile
     {
+        //Relative path of program:
+        private static string projectPath = string.Concat(Environment.CurrentDirectory.AsSpan(Environment.CurrentDirectory.IndexOf("PCPricer")), @"\PCPricer");
+
         public static void RunPython(string script)
         {
             //Obtain the relative path of the program:
-            string path = Environment.CurrentDirectory;
-            path = path[..path.IndexOf("PCPricer")] + @"\PCPricer\scripts";
+            string path = projectPath + @"\scripts";
 
             //Start a new process to run cmd
             Process p = new();
@@ -36,6 +38,15 @@ namespace PCPricer
                 sw.WriteLine("cd " + path);         //Move to correct file location in cmd
                 sw.WriteLine("python " + script);   //Run python script from cmd
             }
+        }
+
+        public static void RunFileExp(string fld)
+        {
+            //Set the folder to open:
+            string path = projectPath + @"\" + fld;
+
+            //Open file explorer to path defined above:
+            Process.Start(path);
         }
     }
 }
