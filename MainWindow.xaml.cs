@@ -98,7 +98,15 @@ namespace PCPricer
 
         private void Btn_Quit_Click(object sender, RoutedEventArgs e)
         {
-
+            if(MessageBox.Show("Are you sure you want to quit?",    //Message
+                "Quit Application?",                                //Title
+                MessageBoxButton.YesNo,                             //Buttons
+                MessageBoxImage.Question)                           //Image
+                == MessageBoxResult.Yes)                            //Result condition
+            {
+                //If they press yes, quit (if no, do nothing):
+                this.Close();
+            }
         }
 
         private void Btn_MarkSelectedMissing_Click(object sender, RoutedEventArgs e)
