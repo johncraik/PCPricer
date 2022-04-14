@@ -35,10 +35,7 @@ namespace PCPricer
                 Resfile.RunPython("ppp.py");
 
                 //Inform user the action was completed successfully:
-                MessageBox.Show("Prices and details of all parts have been updated successfully.",  //Message
-                    "Refresh Complete",                                                             //Title
-                    MessageBoxButton.OK,                                                            //Buttons
-                    MessageBoxImage.Information);                                                   //Image
+                Resfile.ActionComplete("Prices and details of all parts have been updated successfully.");
             }
             catch (Exception ex)
             {
@@ -92,18 +89,27 @@ namespace PCPricer
             //Remove selected items:
             Resfile.RemoveItems(Lv_Missing, true);
             Resfile.RemoveItems(Lv_PriceChg, true);
+
+            //Inform user the action was completed successfully:
+            Resfile.ActionComplete("All items in both lists have been removed successfully.");
         }
 
         private void Btn_MarkMissing_Click(object sender, RoutedEventArgs e)
         {
             //Remove selected items:
             Resfile.RemoveItems(Lv_Missing, true);
+
+            //Inform user the action was completed successfully:
+            Resfile.ActionComplete("All items in the Missing Part Updates list have been removed successfully.");
         }
 
         private void Btn_MarkPriceChg_Click(object sender, RoutedEventArgs e)
         {
             //Remove selected items:
             Resfile.RemoveItems(Lv_PriceChg, true);
+
+            //Inform user the action was completed successfully:
+            Resfile.ActionComplete("All items in the Price Change Updates list have been removed successfully.");
         }
 
         private void Btn_Help_Click(object sender, RoutedEventArgs e)
@@ -128,12 +134,18 @@ namespace PCPricer
         {
             //Remove selected items:
             Resfile.RemoveItems(Lv_Missing, false);
+
+            //Inform user the action was completed successfully:
+            Resfile.ActionComplete("Selected items in the Missing Part Updates list have been removed successfully.");
         }
 
         private void Btn_MarkSelectedPriceChg_Click(object sender, RoutedEventArgs e)
         {
             //Remove selected items:
             Resfile.RemoveItems(Lv_PriceChg, false);
+
+            //Inform user the action was completed successfully:
+            Resfile.ActionComplete("Selected items in the Price Change Updates list have been removed successfully.");
         }
     }
 }

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace PCPricer
@@ -67,6 +68,15 @@ namespace PCPricer
                 //For all items selected, remove them:
                 lv.Items.Remove(i);
             }
+        }
+
+        public static void ActionComplete(string msg)
+        {
+            //Inform user the action was completed successfully:
+            MessageBox.Show(msg,                //Message
+                "Action Completed",             //Title
+                MessageBoxButton.OK,            //Buttons
+                MessageBoxImage.Information);   //Image
         }
     }
 }
