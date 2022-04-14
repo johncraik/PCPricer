@@ -167,6 +167,17 @@
                         <TextBlock Text="Mark Selected as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
                                    VerticalAlignment="Stretch" TextAlignment="Center"/>
                     </Button>
+                    <!--List View:-->
+                    <ListView x:Name="Lv_Missing" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" FontSize="20">
+                        <ListViewItem Content="Test"/>
+                        <ListViewItem Content="Test123"/>
+                        <ListViewItem Content="Test55"/>
+                        <ListViewItem Content="3123Test"/>
+                        <ListViewItem Content="Tes241t"/>
+                        <ListViewItem Content="Tes44412t"/>
+                        <ListViewItem Content="Test4"/>
+                        <ListViewItem Content="UR MUM"/>
+                    </ListView>
                 </Grid>
 
                 <!--#Price Changes:>>>-->
