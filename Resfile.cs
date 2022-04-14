@@ -70,11 +70,15 @@ namespace PCPricer
             }
         }
 
-        public static void ActionComplete(string msg)
+        public static void ActionComplete(string msg, string tl)
         {
+            if (tl == null)
+            {
+                tl = "Action Completed";
+            }
             //Inform user the action was completed successfully:
             MessageBox.Show(msg,                //Message
-                "Action Completed",             //Title
+                tl,             //Title
                 MessageBoxButton.OK,            //Buttons
                 MessageBoxImage.Information);   //Image
         }
