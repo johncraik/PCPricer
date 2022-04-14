@@ -89,17 +89,21 @@ namespace PCPricer
 
         private void Btn_MarkALL_Click(object sender, RoutedEventArgs e)
         {
-
+            //Remove selected items:
+            Resfile.RemoveItems(Lv_Missing, true);
+            Resfile.RemoveItems(Lv_PriceChg, true);
         }
 
         private void Btn_MarkMissing_Click(object sender, RoutedEventArgs e)
         {
-
+            //Remove selected items:
+            Resfile.RemoveItems(Lv_Missing, true);
         }
 
         private void Btn_MarkPriceChg_Click(object sender, RoutedEventArgs e)
         {
-
+            //Remove selected items:
+            Resfile.RemoveItems(Lv_PriceChg, true);
         }
 
         private void Btn_Help_Click(object sender, RoutedEventArgs e)
@@ -122,23 +126,14 @@ namespace PCPricer
 
         private void Btn_MarkSelectedMissing_Click(object sender, RoutedEventArgs e)
         {
-            ItemCollection items = Lv_Missing.Items;
-            List<ListViewItem> lvi = new List<ListViewItem>();
-            foreach(ListViewItem item in items)
-            {
-                if (item.IsSelected)
-                {
-                    lvi.Add(item);
-                }
-
-            }
-
-            MessageBox.Show("Items selected: " + lvi.Count);
+            //Remove selected items:
+            Resfile.RemoveItems(Lv_Missing, false);
         }
 
         private void Btn_MarkSelectedPriceChg_Click(object sender, RoutedEventArgs e)
         {
-
+            //Remove selected items:
+            Resfile.RemoveItems(Lv_PriceChg, false);
         }
     }
 }

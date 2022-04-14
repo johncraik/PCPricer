@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace PCPricer
 {
@@ -48,6 +49,24 @@ namespace PCPricer
 
             //Open file explorer to path defined above:
             Process.Start("explorer.exe", path);
+        }
+
+        public static void RemoveItems(ListView lv, bool ALL)
+        {
+            //ALL items:
+            if (ALL)
+            {
+                //If all items are to be removed, clear list view and retrun.
+                lv.Items.Clear();
+                return;
+            }
+
+            //ONLY items selected:
+            foreach(ListViewItem i in lv.SelectedItems)
+            {
+                //For all items selected, remove them:
+                lv.Items.Remove(i);
+            }
         }
     }
 }
