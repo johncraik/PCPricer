@@ -11,7 +11,8 @@ namespace PCPricer
     internal static class  Resfile
     {
         //Relative path of program:
-        private static string projectPath = string.Concat(Environment.CurrentDirectory.AsSpan(Environment.CurrentDirectory.IndexOf("PCPricer")), @"\PCPricer");
+        private static readonly string initialPath = Environment.CurrentDirectory;
+        private static readonly string projectPath = initialPath[..initialPath.IndexOf("PCPricer")] + @"PCPricer";
 
         public static void RunPython(string script)
         {
@@ -46,7 +47,7 @@ namespace PCPricer
             string path = projectPath + @"\" + fld;
 
             //Open file explorer to path defined above:
-            Process.Start(path);
+            Process.Start("explorer.exe", path);
         }
     }
 }
