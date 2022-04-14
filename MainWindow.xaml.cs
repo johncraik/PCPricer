@@ -40,7 +40,7 @@ namespace PCPricer
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error occured. " +               //Line 1 of message
-                    "\nThe script could not be found?" +               //Line 2 of message
+                    "\nThe script could not be found?" +                        //Line 2 of message
                     "\n------------------------------------------\nDetails:" +  //Breaker and line 3 of message
                     "\n" + ex.Message);                                         //Exception details
             }
