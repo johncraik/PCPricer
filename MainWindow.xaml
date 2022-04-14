@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCPricer"
         mc:Ignorable="d"
-        Title="PC Pricer Application" Height="1080" Width="1920">
+        Title="PC Pricer Application" Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
     <Grid>
         <!--Initial Grid (Add padding to app)-->
         <Grid.ColumnDefinitions>
