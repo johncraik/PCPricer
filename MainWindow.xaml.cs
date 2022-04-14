@@ -29,8 +29,25 @@ namespace PCPricer
 
         private void Btn_Refresh_Click(object sender, RoutedEventArgs e)
         {
-            //Run python script 'ppp.py' (ppp = pcpartpicker)
-            Resfile.RunPython("ppp.py");
+            try
+            {
+                //Try to run python script 'ppp.py' (ppp = pcpartpicker):
+                Resfile.RunPython("ppp.py");
+
+                //Inform user the action was completed successfully:
+                MessageBox.Show("Prices and details of all parts have been updated successfully.",  //Message
+                    "Refresh Complete",                                                             //Title
+                    MessageBoxButton.OK,                                                            //Buttons
+                    MessageBoxImage.Information);                                                   //Image
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error occured. " +               //Line 1 of message
+                    "\nThe script could not be found?" +               //Line 2 of message
+                    "\n------------------------------------------\nDetails:" +  //Breaker and line 3 of message
+                    "\n" + ex.Message);                                         //Exception details
+            }
+            
         }
 
         private void Btn_OpenSCR_Click(object sender, RoutedEventArgs e)
@@ -43,7 +60,7 @@ namespace PCPricer
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error occured. " +               //Line 1 of message
-                    "\nThe folder location could not be found." +               //Line 2 of message
+                    "\nThe folder location could not be found?" +               //Line 2 of message
                     "\n------------------------------------------\nDetails:" +  //Breaker and line 3 of message
                     "\n" + ex.Message);                                         //Exception details
             }
