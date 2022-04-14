@@ -35,7 +35,18 @@ namespace PCPricer
 
         private void Btn_OpenSCR_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                //Try to run file explorer to scripts folder:
+                Resfile.RunFileExp("scripts");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error occured. " +               //Line 1 of message
+                    "\nThe folder location could not be found." +               //Line 2 of message
+                    "\n------------------------------------------\nDetails:" +  //Breaker and line 3 of message
+                    "\n" + ex.Message);                                         //Exception details
+            }
         }
 
         private void Btn_OpenDAT_Click(object sender, RoutedEventArgs e)
