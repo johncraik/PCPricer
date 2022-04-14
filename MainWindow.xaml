@@ -163,21 +163,12 @@
                            VerticalContentAlignment="Center" Margin="0,0,0,10"/>
                     <!--Mark Selected Updates Btn:-->
                     <Button x:Name="Btn_MarkSelectedMissing" Grid.Column="1" Grid.Row="0" FontSize="25" 
-                            BorderThickness="2" Margin="0,0,10,0" Padding="5" Click="Btn_MarkSelectedMissing_Click">
+                            BorderThickness="2" Margin="10,10,0,0" Padding="5" Click="Btn_MarkSelectedMissing_Click">
                         <TextBlock Text="Mark Selected as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
                                    VerticalAlignment="Stretch" TextAlignment="Center"/>
                     </Button>
                     <!--List View:-->
-                    <ListView x:Name="Lv_Missing" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" FontSize="20">
-                        <ListViewItem Content="Test"/>
-                        <ListViewItem Content="Test123"/>
-                        <ListViewItem Content="Test55"/>
-                        <ListViewItem Content="3123Test"/>
-                        <ListViewItem Content="Tes241t"/>
-                        <ListViewItem Content="Tes44412t"/>
-                        <ListViewItem Content="Test4"/>
-                        <ListViewItem Content="UR MUM"/>
-                    </ListView>
+                    <ListView x:Name="Lv_Missing" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" FontSize="20"/>
                 </Grid>
 
                 <!--#Price Changes:>>>-->
@@ -191,16 +182,18 @@
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
 
-                    <!--Missing Parts Update Title:-->
+                    <!--Price Changes Update Title:-->
                     <Label Grid.Column="0" Grid.Row="0" Content="Price Change Updates" 
                            FontWeight="Bold" FontSize="45"                      
                            VerticalContentAlignment="Center" Margin="0,0,0,10"/>
                     <!--Mark Selected Updates Btn:-->
                     <Button x:Name="Btn_MarkSelectedPriceChg" Grid.Column="1" Grid.Row="0" FontSize="25" 
-                            BorderThickness="2" Margin="0,0,10,0" Padding="5" Click="Btn_MarkSelectedPriceChg_Click">
+                            BorderThickness="2" Margin="10,10,0,0" Padding="5" Click="Btn_MarkSelectedPriceChg_Click">
                         <TextBlock Text="Mark Selected as Actioned" TextWrapping="Wrap" HorizontalAlignment="Stretch" 
                                    VerticalAlignment="Stretch" TextAlignment="Center"/>
                     </Button>
+                    <!--List View:-->
+                    <ListView x:Name="Lv_PriceChg" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" FontSize="20"/>
                 </Grid>
             </Grid>
         </Grid>
