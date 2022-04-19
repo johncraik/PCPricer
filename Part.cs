@@ -78,5 +78,17 @@ namespace PCPricer
         {
             this.price = price;
         }
+
+
+        /// <summary>
+        /// Return part object as a string
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return ("Brand: " + this.brand 
+                + ". Model: " + this.model
+                + ". Price (GBP): " + this.price);
+        }
     }
 }
