@@ -137,5 +137,97 @@ namespace PCPricer
         {
             return pcCase;
         }
+
+
+        //SET METHODS:
+        /// <summary>
+        /// Set the name of the product
+        /// </summary>
+        /// <param name="name"></param>
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+
+        /// <summary>
+        /// Set the price of the product
+        /// </summary>
+        /// <param name="price"></param>
+        public void SetPrice(float price)
+        {
+            this.price = price;
+        }
+
+        /// <summary>
+        /// Set the CPU part in the product
+        /// </summary>
+        /// <param name="cpu"></param>
+        public void SetCPU(Part cpu)
+        {
+            this.cpu = cpu;
+        }
+
+        /// <summary>
+        /// Set the CPU Cooler part in the product
+        /// </summary>
+        /// <param name="cpuCooler"></param>
+        public void SetCPUCooler(Part cpuCooler)
+        {
+            this.cpuCooler = cpuCooler;
+        }
+
+        /// <summary>
+        /// Set the Motherboard part in the product
+        /// </summary>
+        /// <param name="motherboard"></param>
+        public void SetMotherboard(Part motherboard)
+        {
+            this.motherboard = motherboard;
+        }
+
+        /// <summary>
+        /// Set the Memory part in the product
+        /// </summary>
+        /// <param name="memory"></param>
+        public void SetMemory(Part memory)
+        {
+            this.memory = memory;
+        }
+
+        /// <summary>
+        /// Set the PSU part in the product
+        /// </summary>
+        /// <param name="psu"></param>
+        public void SetPSU(Part psu)
+        {
+            this.psu = psu;
+        }
+
+        /// <summary>
+        /// Set the GPU part in the product
+        /// </summary>
+        /// <param name="gpu"></param>
+        public void SetGPU(Part gpu)
+        {
+            this.gpu = gpu;
+        }
+
+        /// <summary>
+        /// Set the HDD part in the product
+        /// </summary>
+        /// <param name="hdd"></param>
+        public void SetHDD(Part hdd)
+        {
+            this.hdd = hdd;
+        }
+
+        /// <summary>
+        /// Set the Case part in the product
+        /// </summary>
+        /// <param name="pcCase"></param>
+        public void SetCase(Part pcCase)
+        {
+            this.pcCase = pcCase;
+        }
     }
 }
